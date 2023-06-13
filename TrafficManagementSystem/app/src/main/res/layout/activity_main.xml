@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:layout_weight="1">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:outlineAmbientShadowColor="@color/white"
+            android:outlineSpotShadowColor="@color/white"
+            app:cardBackgroundColor="#EFEFEF"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/logo"
+                android:text="ROUTE"
+                android:textAlignment="center"
+                android:textSize="30dp" />
+
+            <ImageView
+                android:id="@+id/iv_best_route"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/base" />
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:outlineAmbientShadowColor="@color/white"
+        android:outlineSpotShadowColor="@color/white"
+        app:cardBackgroundColor="#F3F3F3"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:padding="7dp">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:outlineSpotShadowColor="#FFFFFF"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_direction"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_up" />
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:id="@+id/tv_best"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="7dp"
+                android:fontFamily="@font/main"
+                android:text="Loading data..."
+                android:textAlignment="center"
+                android:textColor="#00C845"
+                android:textSize="22dp" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:outlineSpotShadowColor="@color/white"
+        app:cardBackgroundColor="#EFEFEF"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/main"
+                android:text="Number of vehicles"
+                android:textAlignment="center"
+                android:textColor="#787878"
+                android:textSize="17dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="75dp"
+                        android:layout_height="90dp"
+                        android:orientation="vertical"
+                        android:outlineAmbientShadowColor="@color/white"
+                        android:outlineSpotShadowColor="@color/white"
+                        app:cardBackgroundColor="#F9F9F9"
+                        app:cardCornerRadius="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_car1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/main"
+                            android:text="0"
+                            android:textColor="#616161"
+                            android:textSize="40dp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/main"
+                        android:text="Route A"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_light"
+                        android:textSize="17dp" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="75dp"
+                        android:layout_height="90dp"
+                        android:orientation="vertical"
+                        android:outlineAmbientShadowColor="@color/white"
+                        android:outlineSpotShadowColor="@color/white"
+                        app:cardBackgroundColor="#F9F9F9"
+                        app:cardCornerRadius="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_car2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/main"
+                            android:text="0"
+                            android:textColor="#616161"
+                            android:textSize="40dp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/main"
+                        android:text="Route B"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_light"
+                        android:textSize="17dp" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="75dp"
+                        android:layout_height="90dp"
+                        android:orientation="vertical"
+                        android:outlineAmbientShadowColor="@color/white"
+                        android:outlineSpotShadowColor="@color/white"
+                        app:cardBackgroundColor="#F9F9F9"
+                        app:cardCornerRadius="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_car3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/main"
+                            android:text="0"
+                            android:textColor="#616161"
+                            android:textSize="40dp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/main"
+                        android:text="Route C"
+                        android:textAlignment="center"
+                        android:textSize="17dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
